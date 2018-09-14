@@ -7,7 +7,7 @@
      body {
        font-weight: 800;
        line-height: 1.55;
-       color: #222;
+       color: #111;
      }
      p, li {
        font-size: 1.8rem;
@@ -25,18 +25,33 @@
      .img-m img {
        width: 100%;
      }
+
+     .img-s {
+       width: 450px;
+     }
+     .img-s img {
+       width: 100%;
+     }
+
+     .img-xs {
+       width: 350px;
+     }
+     .img-xs img {
+       width: 100%;
+     }
+
      .light-shadow {
        text-shadow: 2px 2px 0px white;
      }
      a {
        color: inherit;
        text-decoration: none;
-       border-bottom: 2px dotted #2b90d9;
+       border-bottom: 2px dotted blue;
        transition: color 100ms ease, border 100ms ease;
      }
      a:hover,
      a:active {
-       color: #2b90d9;
+       color: blue;
        border-bottom-style: solid;
      }
      .small {
@@ -49,13 +64,39 @@
      .remark-inline-code {
        background-color: #ddd;
      }
+
+     .flex {
+       display: flex;
+     }
+
+     .flex-help {
+       flex: 0 0 50%;
+     }
+
+     .flex-help ul {
+       margin-top: 0;
+       margin-left: 2em;
+     }
+
+     .hljs-default {
+       background-color: #ddd;
+     }
+
+     .center {
+       text-align: center;
+     }
+
+     h1 + h1 {
+       margin-top: -.5em;
+     }
     </style>
   </head>
   <body>
     <textarea id="source">
       class: center, middle
 
-      # Generative music, playful visualizations
+      # Generative music,
+      # playful visualizations
       # and where to find them
 
       [Web Audio Conf](https://webaudioconf.com/) | Berlin 2018
@@ -64,51 +105,149 @@
 
       ---
 
-      # Short answer
-
-      In your browser!
-
+      ### Short answer
 
       --
 
-      # Long answer
-
-      after this introduction!
+      # In your browser!
 
       ---
 
-      ## Intro slide
+      ### Long answer
 
-      - Open Knowledge Foundation DE
+      --
 
-      - people's struggle with and fear of technology
+      # After this introduction!
 
-      - video games
+      ---
 
-      - generative / creative code
+      ### Ohai, I'm Lisa 🌊
 
-      - personal enjoyment of technology
+      .flex[
+      .img-s[
+        ![lis](assets/lis-sidewalk.jpg)]
+      .flex-help[
+
+      ]]
+
+      ---
+
+      ### Ohai, I'm Lisa 🌊
+
+      .flex[
+      .img-s[
+        ![lis](assets/lis-sidewalk.jpg)]
+      .flex-help[
+        - I work at [OKF DE](https://okfn.de/)
+      ]]
+
+      ---
+
+      ### Ohai, I'm Lisa 🌊
+
+      .flex[
+      .img-s[
+        ![lis](assets/lis-sidewalk.jpg)]
+      .flex-help[
+        * I work at [OKF DE](https://okfn.de/)
+
+
+        * Involved with  [CryptoParty](https://www.cryptoparty.in/berlin) Berlin
+
+      ]]
+
+      ---
+
+      ### Ohai, I'm Lisa 🌊
+
+      .flex[
+      .img-s[
+        ![lis](assets/lis-sidewalk.jpg)]
+      .flex-help[
+        * I work at [OKF DE](https://okfn.de/)
+
+
+        * Involved with  [CryptoParty](https://www.cryptoparty.in/berlin) Berlin
+
+        * <3 (making) indie video games
+      ]]
+
+      ---
+
+
+      ### Ohai, I'm Lisa 🌊
+
+      .flex[
+      .img-s[
+        ![lis](assets/lis-sidewalk.jpg)]
+      .flex-help[
+        * I work at [OKF DE](https://okfn.de/)
+
+
+        * Involved with  [CryptoParty](https://www.cryptoparty.in/berlin) Berlin
+
+        * <3 (making) indie video games
+
+        * Creative coding, generative art and hardware projects
+      ]]
+
+      ---
+
+      ### Two views on technology
+
+      .center[.img-xs[
+      ![venn diagram](assets/venn.png)]
+
+      skepticism vs embracement
+
+      insecurity vs curiosity
+
+      cautiousness vs enjoyment]
+
+      ---
+
+      ### I want to explore that space
+
+      --
+
+      # Party:4:2
 
       ---
 
       ## Party:4:2
 
-      It's like getting to know someone better.
+      ---
+
+      ## Party:4:2 - The idea
 
       --
 
-      But that someone is your computer.
+      - Create an enjoyable introduction for people to the creative side of technology.
 
+      --
+
+      - Like at a party, where you get to know people you sometimes wouldn't otherwise.
+
+      --
+
+      - The name refers to Shania Twain's song '[Party for two](https://www.youtube.com/watch?v=BzD0nd7tzNI)'
 
       ---
 
-      Remind people of the beautiful things machines can do.
+      ## Not the solution to all problems
 
-      ---
+      --
 
-      Does not solve the problem of unethical use of machines by technologists.
+      - There is still (valid) reason for people to be skeptical about technologies and what is behind them
+      --
 
-      Nor the lack of digital literacy of people.
+
+      - Lack of digital literacy needs to be addressed
+
+      --
+
+
+      - Ethical and sustainable use of technology needs both a curious and cautious side
 
       --
 
@@ -116,59 +255,219 @@
 
       ---
 
+      class: center, middle
+
       # We have a party to throw!
 
       ---
 
-      Ingredients:
+      class: center, middle
 
-      - Music
+      [DEMO](https://lislis.de/projects/party42)
 
-      - Decorations
-
-      - Interaction
 
       ---
 
+      ## Party:4:2 - The technology
+
+      --
+
+      3 main ingredients
+
+      --
+
+      [ ] Music
+
+      --
+
+      [ ]  Visuals
+
+      --
+
+      [ ] Interaction
+
+      ---
+
+      class: center, middle
+
       # Music
 
-      procedually generated snippets
+      ---
 
-      ToneJS for synths and scheduling
+      class: center, middle
 
-      create 8 second snippets of melodies on the fly
-
-      based off a base note and scale
-
-      randomly selecting notes that fit the scale to fill meassures
-
-      plus a little beat
-
-      and some effects
+      # JukeGen
 
       ---
 
       ## JukeGen
 
-      - on npm
+      - procedual music generator
+
+      - inspired by [a tutorial by Christer Kaitila](http://www.procjam.com/tutorials/en/music/)
+
+      - [Tone.js](https://tonejs.github.io/) for synths and scheduling
+
+      - [github.com/lislis/jukegen](https://github.com/lislis/jukegen)
+
 
       ---
 
-      # Decorations aka visuals
+      ## JukeGen - behind the scenes
 
-      WebGL fragment shader
+      - at instance creation
 
-      feeding fft data directly into the shader
+        - picks a base note and scale
 
-      look ma, no framework \o/ less dependencies
+        - chooses a beat pattern
 
-      but performance is poor, which I could have guessed
-
-      potentially more perf improvements tho
+        - initialises effects
 
       ---
+
+      ## JukeGen - behind the scenes
+
+      - on start
+
+        - generates melody snippet to fill one meassure
+
+        - loops it
+
+        - and generates a new snippet
+
+      ---
+
+      ## JukeGen - behind the scenes
+
+      - interface
+
+        - semitone interval range is defined by variable
+
+        - effect wetness
+
+        - volume and bpm
+
+        - :soon: adjustable hihat
+
+        - :soon: amount of notes distributed per meassure
+
+      ---
+
+      ## Party:4:2 - The technology
+
+      --
+
+      3 main ingredients
+
+      --
+
+      [x] Music
+
+      [ ] Visuals
+
+      [ ] Interaction
+
+      ---
+
+      class: center, middle
+
+      # Visuals
+
+      ---
+
+      class: center, middle
+
+      # WebGL / GLSL
+
+      ---
+
+      ## WebGL
+
+      --
+
+      - optimized rendering on the GPU
+
+      --
+
+      - setup a canvas with gl context
+
+      --
+
+      - in the gl context create a  program that links
+
+        - a vertex shader
+
+        - a fragment shader
+
+      --
+
+      - setup is usually done by a rendering library
+
+      ---
+
+      ## WebGL
+
+      - I chose the DIY setup
+
+        - no shapes
+
+        - handcoded fragment shader does the magic
+
+      --
+
+      - data sent to the shader from the environment
+
+        - FFT data from JukeGen
+
+        - codes for colors, vis types, background coarseness
+
+      ---
+
+      ## WebGL
+
+      Problem: very poor performance 😭
+
+      --
+
+      - 2-3 FPS on 5 year old Thinkpad
+
+      - 15 FPS on 3 year old Macbook Pro
+
+      --
+
+      Revisit calculations done with FFT data
+
+      ---
+
+      ## Party:4:2 - The technology
+
+      --
+
+      3 main ingredients
+
+      --
+
+      [x] Music
+
+      [x] Visuals
+
+      [ ] Interaction
+
+      ---
+
+      class: center, middle
 
       # Interaction
+
+      ---
+
+      class: center, middle
+
+      # Web Gamepad API
+
+      ---
+
+      # Web Gamepad API
 
       WebGamepad API
 
