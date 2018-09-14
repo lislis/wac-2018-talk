@@ -55,7 +55,7 @@
        border-bottom-style: solid;
      }
      .small {
-       font-size: 1rem;
+       font-size: 0.5rem;
        font-weight: 400;
      }
      code {
@@ -88,6 +88,10 @@
 
      h1 + h1 {
        margin-top: -.5em;
+     }
+
+     .small li p {
+       margin: 0;
      }
     </style>
   </head>
@@ -469,50 +473,86 @@
 
       # Web Gamepad API
 
-      WebGamepad API
+      --
 
-      why not mouse and keyboard?
+      - controllers are associated with playful, not-so-serious things, perfect for this!
 
-      people like clicki interfaces, most users don't like keyboards
+      --
 
-      take away the feeling of breaking something
-
-      Controllers are associated with playful/ game-y things, perfect for this!
-
-      Very underrated, but also very complex
-
-      Contro looks very cool, but didn't work with my controller :/
-
-      So I wrote some custom code
-
-      Query the gamepad in a loop
-
-      Explorative button mapping, but not too confusing?
-
-      which mappings would feel intuitive?
+      - take away the the possibility of breaking something, loosen the athmosphere
 
       ---
 
-      Demo
+      # Web Gamepad API
+
+      - API is underrated, but also not trivial to develop for
+
+      --
+
+        - user needs a controller
+
+        - there are a lot of different ones
+
+      --
+
+      - [Contro](https://www.npmjs.com/package/contro) looks very cool, but didn't work with the dpad of my controller 🤔
+
+      --
+
+      - So I wrote some custom code (without keyboard fall-back)
 
       ---
 
-      ## Resources and further reading
+      # Web Gamepad API
 
-      - WebGL
+      - basic idea: query `navigator.gamepad` for current state
 
+      --
 
+        - buttons array for physical buttons (true/false)
+
+      --
+
+        - axes array for sticks and dpads (two axis per stick, values from -1 to 1)
+
+      --
+
+      - Mapping the buttons to JukeGen/ shader properties
+
+      --
+
+      - balance between intuitive and explorative
+
+      ---
+
+      Overview
+
+      ---
+
+      ### Resources and further reading
+
+      .small[
+      - http://www.procjam.com/tutorials/en/music/
+      - https://tonejs.github.io/
+
+      - https://thebookofshaders.com/
+      - https://webglfundamentals.org/webgl/lessons/webgl-fundamentals.html
+      - http://www.wuhao.co/uploads/2/6/0/1/26012804/paper_final.pdf
+
+      - https://hacks.mozilla.org/2013/12/the-gamepad-api/
+      - https://w3c.github.io/gamepad/#remapping
+      - https://www.npmjs.com/package/contro]
 
       ---
 
       ## Thank you for your attention!
 
-      - [jukegen (code)]()
-      - [party:4:2 (code)]()
-      - [party:4:2 (live)]()
-      - [these slides (live)]()
+      - [github.com/lislis/jukegen](https://github.com/lislis/jukegen) (code)
+      - [party:4:2](https://github.com/lislis/party-4-2/) (code)
+      - [party:4:2](https://lislis.de/projects/party42/) (live)
+      - [these slides](lislis.de/talks/wac-2018) (live)
 
-      - [lislis.de]()
+      - [lislis.de](https://lislis.de/)
 
 
     </textarea>
