@@ -7,18 +7,12 @@
      body {
        font-weight: 800;
        line-height: 1.55;
-       color: #111;
+       color: #341844;
      }
      p, li {
-       font-size: 1.8rem;
+       font-size: 1.6rem;
      }
-     .bg-cover {
-       background-size: cover !important;
-     }
-     .light-text {
-       color: #eee;
-       text-shadow: 2px 2px 0px #222;
-     }
+
      .img-m {
        width: 800px;
      }
@@ -40,19 +34,16 @@
        width: 100%;
      }
 
-     .light-shadow {
-       text-shadow: 2px 2px 0px white;
-     }
      a {
        color: inherit;
        text-decoration: none;
-       border-bottom: 2px dotted blue;
-       transition: color 100ms ease, border 100ms ease;
+       border-bottom: 2px solid #341844;
+       transition: color 100ms ease, background-color 100ms ease;
      }
      a:hover,
      a:active {
-       color: blue;
-       border-bottom-style: solid;
+       color: #bb9cae;
+       background-color: #341844;
      }
      .small {
        font-size: 0.5rem;
@@ -79,11 +70,26 @@
      }
 
      .hljs-default {
-       background-color: #ddd;
+       background-color: #bb9cae;
+     }
+
+     .invert {
+       background-color: #341844;
+       color: #bb9cae;
+     }
+
+
+     .shadow img {
+       box-shadow: 0px 0px 2px 2px #341844;
      }
 
      .center {
        text-align: center;
+     }
+
+     .center .img-xs,
+     .center .img-m {
+       margin: auto;
      }
 
      h1 + h1 {
@@ -97,7 +103,7 @@
   </head>
   <body>
     <textarea id="source">
-      class: center, middle
+      class: center, middle, invert
 
       # Generative music,
       # playful visualizations
@@ -128,7 +134,7 @@
       ### Ohai, I'm Lisa 🌊
 
       .flex[
-      .img-s[
+      .img-s.shadow[
         ![lis](assets/lis-sidewalk.jpg)]
       .flex-help[
 
@@ -139,7 +145,7 @@
       ### Ohai, I'm Lisa 🌊
 
       .flex[
-      .img-s[
+      .img-s.shadow[
         ![lis](assets/lis-sidewalk.jpg)]
       .flex-help[
         - I work at [OKF DE](https://okfn.de/)
@@ -150,13 +156,13 @@
       ### Ohai, I'm Lisa 🌊
 
       .flex[
-      .img-s[
+      .img-s.shadow[
         ![lis](assets/lis-sidewalk.jpg)]
       .flex-help[
         * I work at [OKF DE](https://okfn.de/)
 
 
-        * Involved with  [CryptoParty](https://www.cryptoparty.in/berlin) Berlin
+        * Involved with  [CryptoParty Berlin](https://www.cryptoparty.in/berlin)
 
       ]]
 
@@ -165,13 +171,14 @@
       ### Ohai, I'm Lisa 🌊
 
       .flex[
-      .img-s[
+      .img-s.shadow[
         ![lis](assets/lis-sidewalk.jpg)]
       .flex-help[
         * I work at [OKF DE](https://okfn.de/)
 
 
-        * Involved with  [CryptoParty](https://www.cryptoparty.in/berlin) Berlin
+
+        * Involved with  [CryptoParty Berlin](https://www.cryptoparty.in/berlin)
 
         * <3 (making) indie video games
       ]]
@@ -182,13 +189,13 @@
       ### Ohai, I'm Lisa 🌊
 
       .flex[
-      .img-s[
+      .img-s.shadow[
         ![lis](assets/lis-sidewalk.jpg)]
       .flex-help[
         * I work at [OKF DE](https://okfn.de/)
 
 
-        * Involved with  [CryptoParty](https://www.cryptoparty.in/berlin) Berlin
+        * Involved with  [CryptoParty Berlin](https://www.cryptoparty.in/berlin)
 
         * <3 (making) indie video games
 
@@ -238,27 +245,6 @@
 
       ---
 
-      ## Not the solution to all problems
-
-      --
-
-      - There is still (valid) reason for people to be skeptical about technologies and what is behind them
-      --
-
-
-      - Lack of digital literacy needs to be addressed
-
-      --
-
-
-      - Ethical and sustainable use of technology needs both a curious and cautious side
-
-      --
-
-      But we can tackle problems one step at a time.
-
-      ---
-
       class: center, middle
 
       # We have a party to throw!
@@ -292,13 +278,13 @@
 
       ---
 
-      class: center, middle
+      class: center, middle, invert
 
       # Music
 
       ---
 
-      class: center, middle
+      class: center, middle, invert
 
       # JukeGen
 
@@ -308,9 +294,15 @@
 
       - procedual music generator
 
+      --
+
       - inspired by [a tutorial by Christer Kaitila](http://www.procjam.com/tutorials/en/music/)
 
+      --
+
       - [Tone.js](https://tonejs.github.io/) for synths and scheduling
+
+      --
 
       - [github.com/lislis/jukegen](https://github.com/lislis/jukegen)
 
@@ -359,11 +351,7 @@
 
       ## Party:4:2 - The technology
 
-      --
-
       3 main ingredients
-
-      --
 
       [x] Music
 
@@ -373,13 +361,13 @@
 
       ---
 
-      class: center, middle
+      class: center, middle, invert
 
       # Visuals
 
       ---
 
-      class: center, middle
+      class: center, middle, invert
 
       # WebGL / GLSL
 
@@ -389,7 +377,7 @@
 
       --
 
-      - optimized rendering on the GPU
+      - accelerated 2D/ 3D rendering on the GPU
 
       --
 
@@ -423,7 +411,7 @@
 
         - FFT data from JukeGen
 
-        - codes for colors, vis types, background coarseness
+        - codes for colors, visualization types, background coarseness
 
       ---
 
@@ -439,17 +427,13 @@
 
       --
 
-      Revisit calculations done with FFT data
+      Revisit calculations done with FFT data in the fragment shader
 
       ---
 
       ## Party:4:2 - The technology
 
-      --
-
       3 main ingredients
-
-      --
 
       [x] Music
 
@@ -459,13 +443,13 @@
 
       ---
 
-      class: center, middle
+      class: center, middle, invert
 
       # Interaction
 
       ---
 
-      class: center, middle
+      class: center, middle, invert
 
       # Web Gamepad API
 
@@ -485,17 +469,17 @@
 
       # Web Gamepad API
 
-      - API is underrated, but also not trivial to develop for
+      - API is underrated and not used often
 
       --
 
         - user needs a controller
 
-        - there are a lot of different ones
+        - there are a lot of different models
 
       --
 
-      - [Contro](https://www.npmjs.com/package/contro) looks very cool, but didn't work with the dpad of my controller 🤔
+      - [Contro](https://www.npmjs.com/package/contro) looks very cool, but didn't work with my controller 🤔
 
       --
 
@@ -503,29 +487,44 @@
 
       ---
 
-      # Web Gamepad API
+      class: center, middle
 
-      - basic idea: query `navigator.gamepad` for current state
-
-      --
-
-        - buttons array for physical buttons (true/false)
-
-      --
-
-        - axes array for sticks and dpads (two axis per stick, values from -1 to 1)
-
-      --
-
-      - Mapping the buttons to JukeGen/ shader properties
-
-      --
-
-      - balance between intuitive and explorative
+      .center.shadow.img-m[
+      ![controller](assets/controller.png)]
+      .small[[screenshot from https://w3c.github.io/gamepad/#remapping](https://w3c.github.io/gamepad/#remapping)]
 
       ---
 
-      Overview
+      ## Party:4:2 - The technology
+
+      3 main ingredients
+
+      [x] Music
+
+      [x] Visuals
+
+      [x] Interaction
+
+      ---
+
+      ## Not the solution to all problems
+
+      --
+
+      - There is still (valid) reason for people to be skeptical about technologies and what is behind them
+      --
+
+
+      - Lack of digital literacy needs to be addressed
+
+      --
+
+
+      - Ethical and sustainable use of technology needs both a curious and cautious side
+
+      --
+
+      But we can tackle problems one step at a time.
 
       ---
 
@@ -548,9 +547,9 @@
       ## Thank you for your attention!
 
       - [github.com/lislis/jukegen](https://github.com/lislis/jukegen) (code)
-      - [party:4:2](https://github.com/lislis/party-4-2/) (code)
-      - [party:4:2](https://lislis.de/projects/party42/) (live)
-      - [these slides](lislis.de/talks/wac-2018) (live)
+      - [github.com/lislis/party-4-2](https://github.com/lislis/party-4-2/) (code)
+      - [lislis.de/projects/party42](https://lislis.de/projects/party42/) (live)
+      - [lislis.de/talks/wac-2018](https://lislis.de/talks/wac-2018) (this slide deck)
 
       - [lislis.de](https://lislis.de/)
 
